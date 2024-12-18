@@ -1,0 +1,43 @@
+general:
+  language: "german"
+
+planner:
+  api-version: "2024-06-01"
+  model: "gpt-4o-mini"
+  temperature: 0.0
+  max_tokens: 5000
+  use_subquestions: True
+
+retrieval:
+  vectorSearch:
+    searchType: "hybrid"      # "similarity" | "hybrid" | "semantic_hybrid"
+    useHydeQuery: True
+    seedChunks: 10             # Number of chunks returned by the search
+    outputChunks: 5           # Number of chunks to keep after reranking
+
+  chunkProcessing:
+    chunkMinExpansion: 1500
+
+  reranking:
+    api-version: "2024-06-01"
+    model: "gpt-4o-mini"
+    temperature: 0.0
+
+analysis:
+  api-version: "2024-06-01"
+  model: "gpt-4o"
+  temperature: 0.0
+  max_tokens: 2000
+  prompting_technique: "self-eval"         # "direct" | "least-to-most" | "self-eval"
+  context_enhancement: True
+  max_refinement_steps: 2               # If answer-generation with self-eval is used
+  self-test-threshold: 4.5              # If answer-generation with self-eval is used
+
+evaluation:
+  agent:
+    api-version: "2024-06-01"
+    model: "gpt-4o"
+    temperature: 0.0
+    max_tokens: 2000
+  async: false
+
