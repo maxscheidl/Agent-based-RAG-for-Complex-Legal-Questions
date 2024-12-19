@@ -21,6 +21,7 @@ the most effective, delivering the highest clarity, accuracy, coverage
 and overall score. Lastly, we highlight opportunities for further
 improvements in retrieval methods and prompting strategies to
 optimize the system’s performance and robustness.
+![grafik](https://github.com/user-attachments/assets/0414b2aa-0e55-4da2-9996-30d8e7f891d6)
 
 
 ## Setup
